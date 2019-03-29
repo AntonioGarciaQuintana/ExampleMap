@@ -49,6 +49,7 @@ export class RegistroArticuloComponent implements OnInit {
         });
     }
 
+
     selectFile(event: any) {
         const file = event.target.files.item(0);
         if (file.type.match('image.*')) {
@@ -101,5 +102,10 @@ export class RegistroArticuloComponent implements OnInit {
         }
         this.markers = new Marker([ass.latlng.lat, ass.latlng.lng], { draggable: true });
         this.markers.addTo(this.map);
+    }
+
+    onSave() {
+        this._toastr.success('El Articulo se guardo correctamente');
+        this.back();
     }
 }

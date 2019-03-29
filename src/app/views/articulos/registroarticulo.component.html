@@ -18,23 +18,27 @@
                             <div class="col-md-8">
                                 <div class="form-group">
                                     <label for="nf-email">Nombre</label>
-                                    <input type="email" id="nf-email" name="nf-email" class="form-control"
+                                    <input type="text" id="nf-email" name="nf-email" class="form-control"
                                         placeholder="Nombre del articulo">
                                 </div>
                                 <div class="form-group">
                                     <label for="nf-category">Categoria</label>
-                                    <input type="password" id="nf-category" name="nf-category" class="form-control"
-                                        placeholder="Enter Password..">
+                                    <select id="select1" name="select1" class="form-control">
+                                        <option value="0">Seleccione una categoria</option>
+                                        <option value="1">Mobiliario</option>
+                                        <option value="2">Sistema de computo</option>
+                                        <option value="3">papeleria</option>
+                                    </select>
                                 </div>
                                 <div class="form-group">
                                     <label for="nf-hours">Horas</label>
-                                    <input type="password" id="nf-hours" name="nf-hours" class="form-control"
-                                        placeholder="Enter Password..">
+                                    <input type="text" id="nf-hours" name="nf-hours" class="form-control"
+                                        placeholder="Inrese las horas del servicio">
                                 </div>
                                 <div class="form-group">
                                     <label for="nf-price">Precio</label>
-                                    <input type="password" id="nf-price" name="nf-price" class="form-control"
-                                        placeholder="Enter Password..">
+                                    <input type="text" id="nf-price" name="nf-price" class="form-control"
+                                        placeholder="Ingrese el precio del articulo">
                                 </div>
                             </div>
                         </div>
@@ -69,12 +73,6 @@
                                 </div>
                             </div>
                         </div>
-
-
-                        <!-- <div class="col-md-12">
-                            <div style="height: 600px;" class="map" leaflet [leafletOptions]="options"  (leafletMapReady)="onMapReady($event)">
-                            </div>
-                        </div> -->
                     </div>
                     <div class="row">
                         <div class="col-md-4">
@@ -108,15 +106,15 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <button type="submit" class="btn btn-sm btn-primary" style="margin-left: 9px"><i
-                                    class="fa fa-plus"></i>
+                            <button type="submit" class="btn btn-sm btn-primary" style="margin-left: 9px"
+                                (click)="onOpenMap();lgModal.show();"><i class="fa fa-plus"></i>
                                 Agregar nueva ubicacion</button>
                         </div>
                     </div>
                 </div>
                 <div class="card-footer">
-                    <button type="submit" class="btn btn-sm btn-primary float-right" style="margin-left: 9px"><i
-                            class="fa fa-dot-circle-o"></i>
+                    <button type="submit" class="btn btn-sm btn-primary float-right" style="margin-left: 9px"
+                        (click)="onSave()"><i class="fa fa-dot-circle-o"></i>
                         Guardar</button>
                     <button type="reset" class="btn btn-sm btn-danger float-right" (click)="back()"><i
                             class="fa fa-ban"></i> Cancelar</button>
@@ -141,7 +139,6 @@
 
                 <div style="height: 600px;" class="map" leaflet [leafletOptions]="options"
                     (leafletMapReady)="onMapReady($event)" (leafletClick)="onPutMarker($event)">
-                    <div [leafletLayer]="layer"></div>
                 </div>
 
                 <div class="row">

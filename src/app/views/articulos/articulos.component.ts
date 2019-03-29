@@ -27,4 +27,8 @@ export class ArticulosComponent implements OnInit {
     this.router.navigate(['/newarticulo'], { relativeTo: this.route });
 
   }
+
+  onDelete(){
+    this._toastr.success('El articulo se ha eliminado correctamente');
+  }
 }
