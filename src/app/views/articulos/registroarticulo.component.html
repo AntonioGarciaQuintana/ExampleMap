@@ -1,0 +1,157 @@
+<div class="animated fadeIn">
+    <!--/.row-->
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-header">
+                    <i class="fa fa-align-justify"></i> Registrar un articulo
+                </div>
+                <div class="card-body">
+                    <form action="" method="post">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <input #fileInput type="file" (change)="selectFile($event)" class="dropify"
+                                    data-max-file-size="50K" (click)="fileInput.value = null" data-max-height="600"
+                                    data-max-width="600" data-allowed-file-extensions="png jpg" data-show-loader="false"
+                                    data-height="290" />
+                            </div>
+                            <div class="col-md-8">
+                                <div class="form-group">
+                                    <label for="nf-email">Nombre</label>
+                                    <input type="email" id="nf-email" name="nf-email" class="form-control"
+                                        placeholder="Nombre del articulo">
+                                </div>
+                                <div class="form-group">
+                                    <label for="nf-category">Categoria</label>
+                                    <input type="password" id="nf-category" name="nf-category" class="form-control"
+                                        placeholder="Enter Password..">
+                                </div>
+                                <div class="form-group">
+                                    <label for="nf-hours">Horas</label>
+                                    <input type="password" id="nf-hours" name="nf-hours" class="form-control"
+                                        placeholder="Enter Password..">
+                                </div>
+                                <div class="form-group">
+                                    <label for="nf-price">Precio</label>
+                                    <input type="password" id="nf-price" name="nf-price" class="form-control"
+                                        placeholder="Enter Password..">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4>Ubicaciones</h4>
+                            <p>Lugares de la ciudad donde se colocaran los articulos</p>
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">1</span>
+                                    </div>
+                                    <input type="text" id="username3" name="username3" class="form-control">
+                                    <div class="input-group-append" style="cursor: pointer;">
+                                        <span class="input-group-text" (click)="onDelete()"><i
+                                                class="fa fa-trash-o"></i></span>
+                                    </div>
+                                    <div class="input-group-append" style="cursor: pointer;">
+                                        <span class="input-group-text" (click)="onCopy()"><i
+                                                class="fa fa-files-o"></i></span>
+                                    </div>
+                                    <div class="input-group-append" style="cursor: pointer;">
+                                        <span class="input-group-text" (click)="onOpenMap();lgModal.show();"><i
+                                                class="fa fa-map-marker"></i> &nbsp; Mapa</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- <div class="col-md-12">
+                            <div style="height: 600px;" class="map" leaflet [leafletOptions]="options"  (leafletMapReady)="onMapReady($event)">
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">1</span>
+                                    </div>
+                                    <input type="text" id="username3" name="username3" class="form-control">
+                                    <div class="input-group-append" style="cursor: pointer;">
+                                        <span class="input-group-text" (click)="onDelete()"><i
+                                                class="fa fa-trash-o"></i></span>
+                                    </div>
+                                    <div class="input-group-append" style="cursor: pointer;">
+                                        <span class="input-group-text" (click)="onCopy()"><i
+                                                class="fa fa-files-o"></i></span>
+                                    </div>
+                                    <div class="input-group-append" style="cursor: pointer;">
+                                        <span class="input-group-text" (click)="onOpenMap();lgModal.show();"><i
+                                                class="fa fa-map-marker"></i> &nbsp; Mapa</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- <div class="col-md-12">
+                                <div style="height: 600px;" class="map" leaflet [leafletOptions]="options"  (leafletMapReady)="onMapReady($event)">
+                                </div>
+                            </div> -->
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button type="submit" class="btn btn-sm btn-primary" style="margin-left: 9px"><i
+                                    class="fa fa-plus"></i>
+                                Agregar nueva ubicacion</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-sm btn-primary float-right" style="margin-left: 9px"><i
+                            class="fa fa-dot-circle-o"></i>
+                        Guardar</button>
+                    <button type="reset" class="btn btn-sm btn-danger float-right" (click)="back()"><i
+                            class="fa fa-ban"></i> Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div bsModal #lgModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="dialog-sizes-name1"
+    [config]="{backdrop: 'static'}">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 id="dialog-sizes-name1" class="modal-title pull-left">Seleccione la ubicacion donde se necesita el
+                    articulo</h4>
+                <button type="button" class="close pull-right" (click)="lgModal.hide()" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+                <div style="height: 600px;" class="map" leaflet [leafletOptions]="options"
+                    (leafletMapReady)="onMapReady($event)" (leafletClick)="onPutMarker($event)">
+                    <div [leafletLayer]="layer"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6"> <button type="button" class="btn btn-secondary btn-lg btn-block"
+                            (click)="lgModal.hide()">Cancelar</button></div>
+                    <div class="col-md-6"> <button type="button" class="btn btn-success btn-lg btn-block"
+                            (click)="lgModal.hide()">Confirmar ubicacion</button></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

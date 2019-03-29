@@ -1,0 +1,57 @@
+<div class="animated fadeIn">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-header">
+          <i class="fa fa-edit"></i>Configuracion para las notificaciones de donaciones y fecha contra reloj del sistema
+          de bienvenida
+        </div>
+        <div class="card-body">
+          <form class="form-horizontal" [formGroup]="configurationFormGroup">
+            <div class="form-group">
+              <label class="col-form-label" for="prependedInput">Correo electronico al cual se le estaran notificando
+                las donaciones</label>
+              <div class="controls">
+                <div class="input-prepend input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">@</span>
+                  </div>
+                  <input id="prependedInput" class="form-control" formControlName="emailControl"
+                    placeholder="Ingrese un correo" size="16" type="text">
+                </div>
+               
+                <p class="error-meessage"
+                  *ngIf="configurationFormGroup.controls.emailControl.errors?.pattern && (configurationFormGroup.controls.emailControl.dirty || configurationFormGroup.controls.emailControl.touched)">
+                  <i class="fa fa-close"></i> El formato del email es incorrecto</p>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-6">
+                <label class="col-form-label" for="appendedInput">Fecha para el contra reloj de la pagina
+                  principal</label>
+                <div class="controls">
+                  <div class="input-group">
+                    <input type="text" size="16" placeholder="Seleccione una fecha" formControlName="dateControl" class="form-control" [minDate]="minDate" bsDatepicker>
+                  </div>
+                  <span class="invalid-feedback">Here's more help text</span>
+                  <p class="validTimer" *ngIf="!validTimer">
+                  <i class="fa fa-close"></i>El formato de la hora es invalida</p>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div >
+                  <div style="padding-top: 7px;">
+                    <timepicker  [formControl]="configurationFormGroup.controls.timerControl" (isValid)="isValid($event)" size="16"></timepicker>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-actions text-right">
+              <button type="submit" class="btn btn-primary" [disabled]="!configurationFormGroup.valid" (click)="onSave()">Guardar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

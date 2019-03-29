@@ -1,0 +1,196 @@
+<div class="animated fadeIn">
+  <!--/.row-->
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-header">
+          <i class="fa fa-align-justify"></i> Catalogo de articulos y servicios
+        </div>
+        <div class="card-body">
+          <h5>Filtros de busqueda</h5>
+
+          <form action="" method="post">
+            <div class="row">
+              <div class="col-md-12 offset-md-12">
+                <div class="form-group">
+                  <label for="nf-email">Nombre del articulo</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-search"></i></span>
+                    </div><input class="form-control ng-untouched ng-pristine ng-valid"
+                      placeholder="Escriba una palabra para buscar..." type="text">
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label for="nf-email">Estatus</label>
+                  <select id="select1" name="select1" class="form-control">
+                    <option value="0">Seleccione un estatus</option>
+                    <option value="1">Activo</option>
+                    <option value="2">Inactivo</option>
+                    <option value="3">Pendiente</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-4 ">
+                <div class="form-group">
+                  <label for="nf-email">Categoria</label>
+                  <select id="select1" name="select1" class="form-control">
+                    <option value="0">Seleccione una categoria</option>
+                    <option value="1">Mobiliario</option>
+                    <option value="2">Sistema de computo</option>
+                    <option value="3">papeleria</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-4 ">
+                <div class="form-group">
+                  <label for="nf-email">Tipo</label>
+                  <select id="select1" name="select1" class="form-control">
+                    <option value="0">Seleccione un tipo</option>
+                    <option value="1">Producto</option>
+                    <option value="2">Servicio</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <button type="button" class="btn btn-info active" aria-pressed="true" (click)="goToRegister()"><i
+                    class="fa fa-plus-square-o" ></i> &nbsp; Nuevo</button>
+              </div>
+              <div class="col-md-6">
+                <button type="button" class="btn btn-info active float-right" aria-pressed="true"
+                  style="margin-left: 9px;"><i class="fa fa-filter"></i>&nbsp;Limpiar</button>
+                <button type="button" class="btn btn-info active float-right" aria-pressed="true"><i
+                    class="fa fa-hand-o-right"></i>&nbsp;Filtrar</button>
+              </div>
+            </div>
+            <br />
+          </form>
+
+
+          <table class="table table-responsive-sm table-hover table-outline mb-0">
+            <thead>
+              <tr>
+                <th>Imagen</th>
+                <th>Nombre</th>
+                <th>Tipo de articulo</th>
+                <th>Fecha de creacion</th>
+                <th>Status</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="text-center">
+                  <div class="avatar">
+                    <img
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCIhwEV0tEvStslpKXFgFzYpHnN1DJp7f3P6mT3p3TyGW-TurW"
+                      class="img-avatar" alt="admin@bootstrapmaster.com">
+                    <span class="avatar-status badge-success"></span>
+                  </div>
+                </td>
+                <td>Telefono</td>
+                <td>Producto</td>
+                <td>2012/01/01</td>
+                <td>
+                  <span class="badge badge-success">Activo</span>
+                </td>
+                <td>
+                  <button type="button" class="btn btn-info active" aria-pressed="true"><i
+                      class="fa fa-trash-o"></i></button>
+                  <button type="button" class="btn btn-info active" aria-pressed="true"><i
+                      class="fa fa-pencil"></i></button>
+                  <button type="button" class="btn btn-info active" aria-pressed="true"><i
+                      class="fa fa-hand-o-right"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-center">
+                  <div class="avatar">
+                    <img src="http://lst.com.uy/fotos/a437" class="img-avatar" alt="admin@bootstrapmaster.com">
+                    <span class="avatar-status badge-success"></span>
+                  </div>
+                </td>
+                <td>Bocinas</td>
+                <td>Producto</td>
+                <td>2012/02/01</td>
+                <td>
+                  <span class="badge badge-secondary">Inactivo</span>
+                </td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="text-center">
+                  <div class="avatar">
+                    <img
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg9wrYtkgmXFVFT-hBGdHTe4SZQBiZqW1MUs-73FHR2JBwAHs73A"
+                      class="img-avatar" alt="admin@bootstrapmaster.com">
+                    <span class="avatar-status badge-success"></span>
+                  </div>
+                </td>
+                <td>silla</td>
+                <td>Producto</td>
+                <td>2012/02/01</td>
+                <td>
+                  <span class="badge badge-secondary">Inactivo</span>
+                </td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="text-center">
+                  <div class="avatar">
+                    <img src="https://i.ebayimg.com/images/g/yL8AAOSw3GlcLTmO/s-l400.jpg" class="img-avatar"
+                      alt="admin@bootstrapmaster.com">
+                    <span class="avatar-status badge-success"></span>
+                  </div>
+                </td>
+                <td>Se necesita gente para limpiar patio</td>
+                <td>Servicio</td>
+                <td>2012/03/01</td>
+                <td>
+                  <span class="badge badge-warning">Pendiente</span>
+                </td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="text-center">
+                  <div class="avatar">
+                    <img src="https://i.ebayimg.com/images/g/56YAAOSwV4Fbcwhc/s-l400.jpg" class="img-avatar"
+                      alt="admin@bootstrapmaster.com">
+                    <span class="avatar-status badge-success"></span>
+                  </div>
+                </td>
+                <td>Coelcat de basura</td>
+                <td>Servicio</td>
+                <td>2012/01/21</td>
+                <td>
+                  <span class="badge badge-success">Active</span>
+                </td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <br />
+          <nav>
+            <ul class="pagination">
+              <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+              <li class="page-item active">
+                <a class="page-link" href="#">1</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">4</a></li>
+              <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <!--/.col-->
+  </div>
+</div>
