@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
 export class DropdownsComponent {
 
   status: { isOpen: boolean } = { isOpen: false };
-  disabled: boolean = false;
-  isDropup: boolean = true;
-  autoClose: boolean = false;
+  disabled = false;
+  isDropup = true;
+  autoClose = false;
 
   constructor() { }
 

@@ -9,6 +9,7 @@ import { P500Component } from './views/error/500.component';
 import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
 import { RegistroArticuloComponent } from './views/articulos/registroarticulo.component';
+import { RegistroPhotoComponent } from './views/fotosyvideos/registrophotos.component';
 
 export const routes: Routes = [
   {
@@ -52,36 +53,28 @@ export const routes: Routes = [
     },
     children: [
       {
-        path: 'base',
-        loadChildren: './views/base/base.module#BaseModule'
-      },
-      {
-        path: 'buttons',
-        loadChildren: './views/buttons/buttons.module#ButtonsModule'
-      },
-      {
         path: 'configuracion',
         loadChildren: './views/configurations/configuration.module#ConfigurationModule'
+      },
+      {
+        path: 'photos',
+        loadChildren: './views/fotosyvideos/photos.module#PhotosModule'
       },
       {
         path: 'dashboard',
         loadChildren: './views/dashboard/dashboard.module#DashboardModule'
       },
       {
-        path: 'icons',
-        loadChildren: './views/icons/icons.module#IconsModule'
-      },
-      {
-        path: 'notifications',
-        loadChildren: './views/notifications/notifications.module#NotificationsModule'
-      },
-      {
-        path: 'theme',
-        loadChildren: './views/theme/theme.module#ThemeModule'
-      },
-      {
         path: 'articulos',
         loadChildren: './views/articulos/articulos.module#ArticulosModule'
+      },
+      {
+        path: 'categorias',
+        loadChildren: './views/categorias/categorias.module#CategoriasModule'
+      },
+      {
+        path: 'donaciones',
+        loadChildren: './views/donaciones/donaciones.module#DonacionesModule'
       },
       {
         path: 'newarticulo',
@@ -89,7 +82,15 @@ export const routes: Routes = [
         data: {
           title: 'Registar articulo'
         }
+      },
+      {
+        path: 'newphoto',
+        component: RegistroPhotoComponent,
+        data: {
+          title: 'Registar foto o video'
+        }
       }
+
     ]
   },
   { path: '**', component: P404Component }

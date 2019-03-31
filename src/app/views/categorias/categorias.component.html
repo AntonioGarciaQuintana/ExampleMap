@@ -1,0 +1,165 @@
+<div class="animated fadeIn">
+  <!--/.row-->
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-header">
+          <i class="fa fa-align-justify"></i> Catalogo de categorias
+        </div>
+        <div class="card-body">
+          <h5>Filtros de busqueda</h5>
+
+          <form action="" method="post">
+            <div class="row">
+              <div class="col-md-12 offset-md-12">
+                <div class="form-group">
+                  <label for="nf-email">Campo de busqueda</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-search"></i></span>
+                    </div><input class="form-control ng-untouched ng-pristine ng-valid"
+                      placeholder="Busqueda por nombre categoría y tipo..." type="text">
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <button type="button" class="btn btn-info active" aria-pressed="true" (click)="registerModal.show();"><i
+                    class="fa fa-plus-square-o"></i> &nbsp; Nuevo</button>
+              </div>
+              <div class="col-md-6">
+                <button type="button" class="btn btn-info active float-right" aria-pressed="true"
+                  style="margin-left: 9px;"><i class="fa fa-filter"></i>&nbsp;Limpiar</button>
+                <button type="button" class="btn btn-info active float-right" aria-pressed="true"><i
+                    class="fa fa-hand-o-right"></i>&nbsp;Filtrar</button>
+              </div>
+            </div>
+            <br />
+          </form>
+         
+
+         <table class="table table-responsive-sm table-hover table-outline mb-0">
+            <thead>
+              <tr>
+                <th>Nombre categoría</th>
+                <th>Tipo categoría</th>
+                <th>Fecha de registro</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Servicio comunitario</td>
+
+                <td>Servicio</td>
+                <td>2012/01/01</td>
+                <td>
+                  <button type="button" class="btn btn-info active" aria-pressed="true" (click)="dangerModal.show()"><i
+                      class="fa fa-trash-o"></i></button>
+                  <button type="button" class="btn btn-info active" aria-pressed="true" (click)="registerModal.show()"><i
+                      class="fa fa-pencil"></i></button>
+                  
+                </td>
+              </tr>
+              <tr>
+                <td>Utiles escolares</td>
+                <td>Admin</td>
+                <td>2012/02/01</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Limpieza de la ciudad</td>
+                <td>Servicio</td>
+                <td>2012/03/01</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Cestos de basura</td>
+                <td>Articulo</td>
+                <td>2012/01/21</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table> 
+          <br />
+          <nav>
+            <ul class="pagination">
+              <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+              <li class="page-item active">
+                <a class="page-link" href="#">1</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">4</a></li>
+              <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div bsModal #dangerModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-danger" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Mensaje del sistema</h4>
+        <button type="button" class="close" (click)="dangerModal.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h5>Esta seguro que desea eliminar el articulo?</h5>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="dangerModal.hide()">Cancelar</button>
+        <button type="button" class="btn btn-danger" (click)="onDelete();dangerModal.hide()">&nbsp;&nbsp;si
+          &nbsp;&nbsp;</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<div bsModal #registerModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="dialog-sizes-name1"
+    [config]="{backdrop: 'static'}">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 id="dialog-sizes-name1" class="modal-title pull-left">Agregar Categoria</h4>
+                <button type="button" class="close pull-right" (click)="lgModal.hide()" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+              <form action="" method="post" class="form-horizontal">
+                <div class="form-group row">
+                  <label class="col-md-3 col-form-label" for="hf-email">Nombre de la categoría</label>
+                  <div class="col-md-9">
+                    <input type="text" id="hf-email" name="hf-email" class="form-control" placeholder="" >
+                    <!-- <span class="help-block">Please enter your email</span> -->
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-md-3 col-form-label" for="hf-password">Tipo de categoría</label>
+                  <div class="col-md-9">
+                    <select id="select1" name="select1" class="form-control">
+                      <option value="0">Seleccione un tipo</option>
+                      <option value="1">Producto</option>
+                      <option value="2">Servicio</option>
+                    </select>
+                    <!-- <span class="help-block">Please enter your password</span> -->
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" (click)="registerModal.hide();">Cancelar</button>
+              <button type="button" class="btn btn-primary" (click)="registerModal.hide();onSaveCategory()">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>

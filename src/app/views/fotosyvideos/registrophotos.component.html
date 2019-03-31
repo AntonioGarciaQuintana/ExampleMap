@@ -1,0 +1,138 @@
+<div class="animated fadeIn">
+    <!--/.row-->
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-header">
+                    <i class="fa fa-align-justify"></i> Registrar foto o video para la pagina de bienvenidas
+                </div>
+                <div class="card-body">
+                    <form action="" method="post">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="nf-category">Sección</label>
+                                    <select id="select1" name="select1" class="form-control">
+                                        <option value="0">Seleccione un sección</option>
+                                        <option value="1">Testimonio</option>
+                                        <option value="2">Cajemenses por el mundo</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="nf-category">Tipo</label>
+                                    <select id="select1" name="select1" class="form-control">
+                                        <option value="0">Seleccione un tipo</option>
+                                        <option value="1">Foto</option>
+                                        <option value="2">Video</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="nf-category">Link del video</label>
+                                    <input type="text" id="nf-email" name="nf-email" class="form-control"
+                                        placeholder="link del video de youtube">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                    <label for="nf-category">Foto del donador</label>
+                                <input #fileInput type="file" (change)="selectFile($event)" class="dropify"
+                                    data-max-file-size="50K" (click)="fileInput.value = null" data-max-height="600"
+                                    data-max-width="300" data-allowed-file-extensions="png jpg" data-show-loader="false"
+                                    data-height="300" />
+                            </div>
+                            <div class="col-md-6">
+                                    <label for="nf-category">Foto de donación</label>
+                                <input #fileInput2 type="file" (change)="selectFile2($event)" class="dropify2"
+                                    data-max-file-size="50K" (click)="fileInput2.value = null" data-max-height="600"
+                                    data-max-width="300" data-allowed-file-extensions="png jpg" data-show-loader="false"
+                                    data-height="300" />
+                            </div>
+                        </div>
+                        <!-- <div class="row">
+                            <div class="col-md-4">
+                                <input #fileInput type="file" (change)="selectFile($event)" class="dropify"
+                                    data-max-file-size="50K" (click)="fileInput.value = null" data-max-height="600"
+                                    data-max-width="600" data-allowed-file-extensions="png jpg" data-show-loader="false"
+                                    data-height="290" />
+                            </div>
+                            <div class="col-md-8">
+                                <div class="form-group">
+                                    <label for="nf-email">Nombre</label>
+                                    <input type="text" id="nf-email" name="nf-email" class="form-control"
+                                        placeholder="Nombre del articulo">
+                                </div>
+                                <div class="form-group">
+                                    <label for="nf-category">Categoria</label>
+                                    <select id="select1" name="select1" class="form-control">
+                                        <option value="0">Seleccione una categoria</option>
+                                        <option value="1">Mobiliario</option>
+                                        <option value="2">Sistema de computo</option>
+                                        <option value="3">papeleria</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="nf-hours">Horas</label>
+                                    <input type="text" id="nf-hours" name="nf-hours" class="form-control"
+                                        placeholder="Inrese las horas del servicio">
+                                </div>
+                                <div class="form-group">
+                                    <label for="nf-price">Precio</label>
+                                    <input type="text" id="nf-price" name="nf-price" class="form-control"
+                                        placeholder="Ingrese el precio del articulo">
+                                </div>
+                            </div>
+                        </div> -->
+                    </form>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4>Comentario</h4>
+                            <textarea id="textarea-input" name="textarea-input" rows="5"
+                                class="form-control"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-sm btn-primary float-right" style="margin-left: 9px"
+                        (click)="onSave()"><i class="fa fa-dot-circle-o"></i>
+                        Guardar</button>
+                    <button type="reset" class="btn btn-sm btn-danger float-right" (click)="back()"><i
+                            class="fa fa-ban"></i> Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div bsModal #lgModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="dialog-sizes-name1"
+    [config]="{backdrop: 'static'}">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 id="dialog-sizes-name1" class="modal-title pull-left">Seleccione la ubicacion donde se necesita el
+                    articulo</h4>
+                <button type="button" class="close pull-right" (click)="lgModal.hide()" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+                <div style="height: 600px;" class="map" leaflet [leafletOptions]="options"
+                    (leafletMapReady)="onMapReady($event)" (leafletClick)="onPutMarker($event)">
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6"> <button type="button" class="btn btn-secondary btn-lg btn-block"
+                            (click)="lgModal.hide()">Cancelar</button></div>
+                    <div class="col-md-6"> <button type="button" class="btn btn-success btn-lg btn-block"
+                            (click)="lgModal.hide()">Confirmar ubicacion</button></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

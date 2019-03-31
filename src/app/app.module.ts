@@ -46,10 +46,11 @@ import { RegistroArticuloComponent } from './views/articulos/registroarticulo.co
 // import { SnotifyModule, SnotifyService, ToastDefaults } from 'ng-snotify';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
+import { RegistroPhotoComponent } from './views/fotosyvideos/registrophotos.component';
 @NgModule({
   imports: [
     BrowserModule,
-    BrowserAnimationsModule, 
+    BrowserAnimationsModule,
     ToastrModule.forRoot(),
     AppRoutingModule,
     AppAsideModule,
@@ -71,7 +72,8 @@ import { LeafletModule } from '@asymmetrik/ngx-leaflet';
     P500Component,
     LoginComponent,
     RegisterComponent,
-    RegistroArticuloComponent
+    RegistroArticuloComponent,
+    RegistroPhotoComponent
   ],
   providers: [{
     provide: LocationStrategy,
