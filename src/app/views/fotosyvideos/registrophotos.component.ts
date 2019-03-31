@@ -141,7 +141,7 @@ export class RegistroPhotoComponent implements OnInit {
     }
 
     onSave() {
-        this._toastr.success('El Articulo se guardo correctamente');
+        this._toastr.success('Las imagenes se guardaron correctamente');
         this.back();
     }
 }
