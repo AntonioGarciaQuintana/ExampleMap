@@ -35,7 +35,7 @@ export class ConfigurationComponent implements OnInit {
     this.validTimer = event;
   }
 
-  onSave(){
-    this.notificationService.success('La configuracion se guardo correctamente');
+  onSave() {
+    this.notificationService.success('La configuración se guardo correctamente');
   }
 }

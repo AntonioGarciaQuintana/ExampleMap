@@ -36,7 +36,7 @@ export class RegistroArticuloComponent implements OnInit {
         this.route.params.subscribe(params => {
             this.idArticulo = params['id'] !== undefined ? +params['id'] : 0;
             if (this.idArticulo !== 0) {
-                // buscar articulo
+                // buscar artículo
             }
         });
 
@@ -105,7 +105,7 @@ export class RegistroArticuloComponent implements OnInit {
     }
 
     onSave() {
-        this._toastr.success('El Articulo se guardo correctamente');
+        this._toastr.success('El artículo se guardó correctamente');
         this.back();
     }
 }

@@ -40,7 +40,7 @@ export const navItems: NavData[] = [
     name: 'Configuraciones'
   },
   {
-    name: 'Configuracion general',
+    name: 'Configuración general',
     url: '/configuracion',
     icon: 'icon-settings'
   },
@@ -51,7 +51,7 @@ export const navItems: NavData[] = [
   },
   {
     title: true,
-    name: 'Catalogos'
+    name: 'Catálogos'
   },
   {
     name: 'Articulos',
@@ -59,7 +59,7 @@ export const navItems: NavData[] = [
     icon: 'icon-star'
   },
   {
-    name: 'Categorias',
+    name: 'Categorías',
     url: '/categorias',
     icon: 'icon-star'
   },

@@ -10,7 +10,7 @@ const routes: Routes = [
     path: '',
     component: ConfigurationComponent,
     data: {
-      title: 'Configuracion general'
+      title: 'Configuración general'
     }
   }
 ];

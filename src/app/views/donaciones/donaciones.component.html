@@ -7,13 +7,13 @@
           <i class="fa fa-align-justify"></i> Consultar donaciones
         </div>
         <div class="card-body">
-          <h5>Filtros de busqueda</h5>
+          <h5>Filtros de búsqueda</h5>
 
           <form action="" method="post">
             <div class="row">
               <div class="col-md-12 offset-md-12">
                 <div class="form-group">
-                  <label for="nf-email">Campo de busqueda</label>
+                  <label for="nf-email">Campo de búsqueda</label>
                   <div class="input-group">
                     <div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-search"></i></span>
                     </div><input class="form-control ng-untouched ng-pristine ng-valid"
@@ -28,7 +28,7 @@
                       <label for="nf-email">Tipo</label>
                       <select id="select1" name="select1" class="form-control">
                         <option value="0">Seleccione un tipo</option>
-                        <option value="1">Articulo</option>
+                        <option value="1">Artículo</option>
                         <option value="2">Servicio</option>
                       </select>
                     </div>
@@ -37,10 +37,10 @@
                   <div class="form-group">
                       <label for="nf-email">Categoria</label>
                       <select id="select1" name="select1" class="form-control">
-                        <option value="0">Seleccione una categoria</option>
+                        <option value="0">Seleccione una categoría</option>
                         <option value="1">Mobiliario</option>
-                        <option value="2">Sistema de computo</option>
-                        <option value="3">papeleria</option>
+                        <option value="2">Sistema de cómputo</option>
+                        <option value="3">papelería</option>
                       </select>
                     </div>
               </div>
@@ -49,7 +49,7 @@
                       <label for="nf-email">Tipo de donadores</label>
                       <select id="select1" name="select1" class="form-control">
                         <option value="0">Seleccione un tipo de donador</option>
-                        <option value="1">Anonimos</option>
+                        <option value="1">Anónimos</option>
                         <option value="2">Personas o empresas</option>
                       </select>
                     </div>
@@ -69,7 +69,7 @@
                 <label class="col-form-label" for="appendedInput">Fecha Fin</label>
                 <div class="controls">
                   <div class="input-group">
-                    <input type="text" placeholder="Seleccione una fecha fn" class="form-control" [minDate]="minDate"
+                    <input type="text" placeholder="Seleccione una fecha fin" class="form-control" [minDate]="minDate"
                       bsDatepicker>
                   </div>
                 </div>
@@ -92,7 +92,7 @@
               <tr>
                 <th class="text-center"><i class="icon-people"></i></th>
                 <th>Donante</th>
-                <th class="text-center">Tipo donacion</th>
+                <th class="text-center">Tipo donación</th>
                 <th class="text-center">Cantidad total</th>
                 <th class="text-center">Persona o empresa</th>
                 <th class="text-center">Fecha de donación</th>
@@ -108,13 +108,13 @@
                   </div>
                 </td>
                 <td>
-                  <div>Jose elías</div>
+                  <div>Jose Elías</div>
                   <div class="small text-muted">
-                    <span>Gonzales acuña</span>
+                    <span>Gonzáles Acuña</span>
                   </div>
                 </td>
                 <td class="text-center">
-                  Articulo
+                  Artículo
                 </td>
                 <td class="text-center">
                   <strong> $ 231.23</strong>
@@ -138,9 +138,9 @@
                   </div>
                 </td>
                 <td>
-                  <div>Maria</div>
+                  <div>María</div>
                   <div class="small text-muted">
-                    <span class="badge badge-info">Cajemense por el mundo</span>Gonzales Gonzales
+                    <span class="badge badge-info">Cajemense por el mundo</span>Gonzáles Gonzáles
                   </div>
                 </td>
                 <td class="text-center">Efectivo</td>
@@ -165,9 +165,9 @@
                   </div>
                 </td>
                 <td>
-                  <div>Maria</div>
+                  <div>Maráa</div>
                   <div class="small text-muted">
-                    Gonzales Gonzales
+                    Gonzáles Gonzáles
                   </div>
                 </td>
                 <td class="text-center">Efectivo</td>
@@ -192,9 +192,9 @@
                   </div>
                 </td>
                 <td>
-                  <div>Jose elías</div>
+                  <div>Jose Elías</div>
                   <div class="small text-muted">
-                    <span class="badge badge-info">Cajemense por el mundo</span> | Gonzales acuña
+                    <span class="badge badge-info">Cajemense por el mundo</span> | Gonzáles Acuña
                   </div>
                 </td>
                 <td class="text-center">
@@ -221,9 +221,9 @@
                   </div>
                 </td>
                 <td>
-                  <div>Jose elías</div>
+                  <div>Jose Elías</div>
                   <div class="small text-muted">
-                    <span>Gonzales acuña</span>
+                    <span>Gonzáles Acuña</span>
                   </div>
                 </td>
                 <td class="text-center">
@@ -250,9 +250,9 @@
                   </div>
                 </td>
                 <td>
-                  <div>Jose elías</div>
+                  <div>Jose Elías</div>
                   <div class="small text-muted">
-                    <span class="badge badge-info">Cajemense por el mundo</span> | Gonzales acuña
+                    <span class="badge badge-info">Cajemense por el mundo</span> | Gonzáles Acuña
                   </div>
                 </td>
                 <td class="text-center">
@@ -302,7 +302,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <h5>Esta seguro que desea eliminar el articulo?</h5>
+        <h5>Esta seguro que desea eliminar el artículo?</h5>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" (click)="dangerModal.hide()">Cancelar</button>
@@ -327,7 +327,7 @@
       <div class="modal-body">
         <div class="row">
           <div class="col-md-12" style="text-align: center">
-            <h3>Maria concepcion Gonzales acuña</h3>
+            <h3>Maráa Concepción Gonzáles Acuña</h3>
           </div>
           <div style="width: 200px; display:block;
           margin:auto;">
@@ -339,7 +339,7 @@
           <div class="col-md-4">
             <div class="form-group">
               <label for="nf-password">Tipo de donación</label>
-              <input type="text" id="nf-password" name="nf-password" class="form-control" value="Articulo" disabled>
+              <input type="text" id="nf-password" name="nf-password" class="form-control" value="Artículo" disabled>
             </div>
           </div>
           <div class="col-md-4">
@@ -366,39 +366,46 @@
                 <table class="table">
                   <thead>
                     <tr>
-                      <th>Articulo</th>
+                      <th>Artículo</th>
                       <th>Ubicación</th>
-                      <th>Cantidad</th>
                       <th>Donación</th>
+                      <th>Cantidad</th>
+                      
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
                       <td>Cesto de basura</td>
-                      <td>Laguna del Nainari</td>
-                      <td>$ 12.12</td>
+                      <td>Laguna del Náinari</td>
                       <td>
-
                         <span class="badge badge-warning">Parcial</span>
                         <!-- <span class="badge badge-success">Active</span> -->
                       </td>
+                      <td>$ 12.12</td>
                     </tr>
                     <tr>
                       <td>Mesabanco</td>
-                      <td>Escuela primaria 23 de octubre</td>
-                      <td>$ 100.12</td>
+                      <td>Escuela Primaria 23 de Octubre</td>
                       <td>
                         <span class="badge badge-success">Completo</span>
                       </td>
+                      <td>$ 100.12</td>
                     </tr>
                     <tr>
                       <td>Muro de seguridad</td>
-                      <td>Colonia villas del rey</td>
-                      <td>$ 200.99</td>
+                      <td>Colonia Villas del Rey</td>
                       <td>
                         <span class="badge badge-warning">Parcial</span>
                         <!-- <span class="badge badge-success">Active</span> -->
                       </td>
+                      <td>$ 200.99</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td>>
+                      </td>
+                      <td><strong>Total:</strong>$ 313.23</td>
                     </tr>
                   </tbody>
                 </table>

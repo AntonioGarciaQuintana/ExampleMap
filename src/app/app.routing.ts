@@ -80,14 +80,14 @@ export const routes: Routes = [
         path: 'newarticulo',
         component: RegistroArticuloComponent,
         data: {
-          title: 'Registar articulo'
+          title: 'Registrar artículo'
         }
       },
       {
         path: 'newphoto',
         component: RegistroPhotoComponent,
         data: {
-          title: 'Registar foto o video'
+          title: 'Registrar foto o video'
         }
       }
 

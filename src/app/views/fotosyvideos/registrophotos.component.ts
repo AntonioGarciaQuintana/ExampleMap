@@ -38,7 +38,7 @@ export class RegistroPhotoComponent implements OnInit {
         this.route.params.subscribe(params => {
             this.idArticulo = params['id'] !== undefined ? +params['id'] : 0;
             if (this.idArticulo !== 0) {
-                // buscar articulo
+                // buscar artículo
             }
         });
 

@@ -29,6 +29,6 @@ export class ArticulosComponent implements OnInit {
   }
 
   onDelete() {
-    this._toastr.success('El articulo se ha eliminado correctamente');
+    this._toastr.success('El artículo se ha eliminado correctamente');
   }
 }

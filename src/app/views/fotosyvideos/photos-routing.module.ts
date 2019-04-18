@@ -9,7 +9,7 @@ const routes: Routes = [
     path: '',
     component: PhotosComponent,
     data: {
-      title: 'FotosYvideos'
+      title: 'Fotos y videos'
     }
   }
 ];
