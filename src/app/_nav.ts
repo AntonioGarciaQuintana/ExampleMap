@@ -54,7 +54,7 @@ export const navItems: NavData[] = [
     name: 'Catálogos'
   },
   {
-    name: 'Articulos',
+    name: 'Artículos',
     url: '/articulos',
     icon: 'icon-star'
   },
